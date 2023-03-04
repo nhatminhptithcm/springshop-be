@@ -41,7 +41,7 @@ public class FileStorageService {
         String filename = uuid.toString() + "." + ext;
 
         try {
-            if (filename.contains("")) {
+            if (filename.contains("..")) {
                 throw new FileStorageException("Sorry! Filename contains invalid path sequence " + filename);
             }
 
